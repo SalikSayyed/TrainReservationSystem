@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+     {% load static %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <style>
+        body{
+        height:100%;
+            background-image:url('{% static "images/log.jpeg" %}');
+            background-repeat:no-repeat;
+            background-size:100% 100%;
+
+        }
+        .log
+        {
+            margin:300px 500px;
+            height:150px;
+            width:300px;
+            border-radius:10px;
+            background-color:rgba(0,0,0,0.6);
+        }
+        .sty
+        {
+            font-size:15px;
+            color:white;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h2 style="text-align:center">LogIn</h2>
+    <div class="log">
+        <br/>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            <span class="sty">Username:</span><input type="text" name="username"><br/>
+            <span class="sty">Password:</span><input type="password" name="password"><br/>
+
+            <input type="submit" value="Login"><br/>
+
+        </form>
+        <a href="/register/" style="float:right;"><button class="btn btn-success" >Register</button></a>
+    </div>
+</body>
+</html>
